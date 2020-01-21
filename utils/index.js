@@ -1,4 +1,4 @@
-import {Dimensions, PixelRatio} from 'react-native';
+import {Dimensions, PixelRatio, findNodeHandle, UIManager} from 'react-native';
 
 const {width: screenWidth, height: screenHeight} = Dimensions.get('window');
 
@@ -18,4 +18,20 @@ export function fontPx(num) {
 export {
     screenHeight,
     screenWidth
+}
+
+export function layout(ref) {
+  const handle = findNodeHandle(ref);
+  return new Promise(resolve => {
+    UIManager.measure(handle, (x, y, width, height, pageX, pageY) => {
+      resolve({
+        x,
+        y,
+        width,
+        height,
+        pageX,
+        pageY,
+      });
+    });
+  });
 }
