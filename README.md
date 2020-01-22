@@ -6,6 +6,16 @@
 2. 创建项目，先使用android studio 同步gradle 文件
 3. gradle下载失败可以手动下载替换
 4. 项目启动失败或者新安装的包下载失败，打开android studio多同步几次，因为是外网，不是很稳定
+5. 配置国内源
+
+```js
+  // build.gradle文件中替换下载源
+  // google()
+  // jcenter()
+  maven { url 'https://maven.aliyun.com/repository/google'}
+  maven { url 'https://maven.aliyun.com/repository/jcenter'}
+  maven { url 'http://maven.aliyun.com/nexus/content/groups/public'}
+```
 
 ## 导航react-navigation
 
@@ -127,3 +137,11 @@ createStackNavigator({
 ## flex布局
 
 方向，居中
+
+## 打包
+
+1. 按照官网文档配置keystore
+2. 配置gradle变量
+3. 配置签名配置
+4. 打包时网络出错，配置下载源
+5. Could not find tools.jar. jdk环境出错，重新配置

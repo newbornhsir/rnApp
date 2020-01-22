@@ -40,10 +40,27 @@ const SettingNavigator = createStackNavigator({
 
 const TabNavigator = createBottomTabNavigator({
   Home: {
-    screen: HomeNavigator
+    screen: HomeNavigator,
+    navigationOptions: {
+      tabBarLabel: '首页'
+    }
   },
   Setting: {
-    screen: SettingNavigator
+    screen: SettingNavigator,
+    navigationOptions: {
+      title: '设置'
+    }
+  }
+}, {
+  tabBarOptions: {
+    showIcon: false,
+    // 不显示icon, 且文本居中
+    labelStyle: {
+      fontSize: 16
+    },
+    tabStyle: {
+      justifyContent: 'center'
+    }
   }
 });
 
