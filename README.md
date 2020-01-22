@@ -145,3 +145,9 @@ createStackNavigator({
 3. 配置签名配置
 4. 打包时网络出错，配置下载源
 5. Could not find tools.jar. jdk环境出错，重新配置
+
+此处已经完成基本配置，需替换/修改一下文件
+
+1. android/app 下 key.store文件
+2. 修改 android 下 gradle.properties文件
+3. 修改 android/app 下buld.gradle文件（看情况修改）

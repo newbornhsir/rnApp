@@ -167,7 +167,7 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
-            signingConfig signingConfigs.debug // 指定签名
+            signingConfig signingConfigs.release // 指定签名
             minifyEnabled enableProguardInReleaseBuilds // debug 设置变量false, release设置变量 true
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
